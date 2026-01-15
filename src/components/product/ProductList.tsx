@@ -24,12 +24,18 @@ export function ProductList() {
   }
 
   return (
-    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+    <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 list-none">
       {isLoading
-        ? Array.from({ length: 8 }).map((_, i) => <SkeletonCard key={i} />)
+        ? Array.from({ length: 8 }).map((_, i) => (
+            <li key={i}>
+              <SkeletonCard />
+            </li>
+          ))
         : products.map((product) => (
-            <ProductCard key={product.index} product={product} />
+            <li key={product.index}>
+              <ProductCard product={product} />
+            </li>
           ))}
-    </div>
+    </ul>
   )
 }
