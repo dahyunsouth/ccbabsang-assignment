@@ -23,7 +23,7 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* 모바일: 가로형, PC: 세로형 */}
       <div className="flex gap-4 md:flex-col md:gap-0 md:border md:rounded-lg md:overflow-hidden md:hover:shadow-lg md:transition-shadow">
         {/* 이미지 영역 (null이지만 공간 확보) */}
-        <div className="relative w-24 h-24 md:w-full md:aspect-square bg-gray-200 rounded-lg md:rounded-none flex-shrink-0">
+        <div className="relative w-24 h-24 md:w-full md:h-36 bg-gray-200 rounded-lg md:rounded-none flex-shrink-0">
           {/* 품절 오버레이 */}
           {isSoldOut && (
             <>
