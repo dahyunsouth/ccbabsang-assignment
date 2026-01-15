@@ -1,4 +1,4 @@
-import { SkeletonCard } from '@/components/ui/SkeletonCard'
+import { ProductList } from '@/components/product/ProductList'
 
 export default function Home() {
   return (
@@ -12,17 +12,7 @@ export default function Home() {
         </p>
       </header>
 
-      {/* SkeletonCard 테스트 */}
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <SkeletonCard />
-        <SkeletonCard />
-        <SkeletonCard />
-        <SkeletonCard />
-        <SkeletonCard />
-        <SkeletonCard />
-        <SkeletonCard />
-        <SkeletonCard />
-      </div>
+      <ProductList />
     </main>
   )
 }
