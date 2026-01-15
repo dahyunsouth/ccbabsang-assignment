@@ -4,7 +4,7 @@
  */
 export function SkeletonCard() {
   return (
-    <article className="animate-pulse">
+    <article className="animate-pulse" aria-busy="true" aria-label="상품 로딩 중">
       {/* 모바일: 가로형, PC: 세로형 */}
       <div className="flex gap-4 md:flex-col md:gap-0 md:border md:rounded-lg md:overflow-hidden">
         {/* 이미지 영역 */}
