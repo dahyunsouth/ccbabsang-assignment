@@ -29,8 +29,13 @@ export function ProductCard({ product }: ProductCardProps) {
             <>
               <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:rounded-none" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-white text-sm md:text-base font-bold">
-                  품절
+                {/* 모바일 */}
+                <span className="text-white text-sm font-bold text-center md:hidden">
+                  Coming<br/>Soon
+                </span>
+                {/* PC: 'Coming Soon' 줄바꿈 없음 */}
+                <span className="hidden md:block text-white text-base font-bold">
+                  Coming Soon
                 </span>
               </div>
             </>
@@ -50,7 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
           {/* 상품명 */}
           <h3 className="text-sm md:text-base font-medium text-gray-900 line-clamp-2">
-            {product.name}
+            {isSoldOut ? '(품절) ' + product.name : product.name}
           </h3>
 
           {/* 가격 */}
