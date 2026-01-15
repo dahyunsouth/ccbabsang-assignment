@@ -26,7 +26,7 @@ export function ProductList() {
   return (
     <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 list-none">
       {isLoading
-        ? Array.from({ length: 8 }).map((_, i) => (
+        ? Array.from({ length: 16 }).map((_, i) => (
             <li key={i}>
               <SkeletonCard />
             </li>
