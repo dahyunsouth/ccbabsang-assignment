@@ -16,7 +16,7 @@ export function ProductList() {
   // 에러 상태
   if (error) {
     return (
-      <div className="text-center py-8">
+      <div className="text-center py-8" role="alert">
         <p className="text-red-600">상품을 불러오는데 실패했습니다.</p>
         <p className="text-sm text-gray-500 mt-2">{error.message}</p>
       </div>
