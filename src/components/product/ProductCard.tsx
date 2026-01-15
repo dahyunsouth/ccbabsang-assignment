@@ -1,5 +1,5 @@
 import { Product } from './types'
-import { cn } from '@/lib/utils'
+import { cn, formatPrice } from '@/lib/utils'
 
 interface ProductCardProps {
   product: Product
@@ -60,7 +60,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
           {/* 가격 */}
           <p className="text-lg md:text-xl font-bold text-gray-900 mt-1">
-            {product.price}
+            {formatPrice(product.price)}
           </p>
         </div>
       </div>
